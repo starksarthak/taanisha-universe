@@ -1,0 +1,119 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden; /* Cinematic feel, no scrolling */
+    background-color: #000;
+}
+
+/* Custom Cursors */
+.cursor-default {
+    cursor: default;
+}
+
+/* Universe 1 Cursor: Lantern Glow */
+.cursor-lantern {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" fill="%23fcd34d" filter="drop-shadow(0 0 8px %23fbbf24)" opacity="0.8"/></svg>') 16 16, auto;
+}
+
+/* Universe 2 Cursor: Snowflake */
+.cursor-snow {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23bae6fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"></path></svg>') 12 12, auto;
+}
+
+/* Universe 3 Cursor: Bubble */
+.cursor-bubble {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="%2367e8f9" stroke-width="2" opacity="0.8"/><circle cx="8" cy="8" r="2" fill="%23ffffff" opacity="0.6"/></svg>') 12 12, auto;
+}
+
+/* Universe 4 Cursor: Magic Wand */
+.cursor-wand {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fbcfe8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4V2M15 16v-2M8 9h2M20 9h2M17.8 11.8L19 13M10.2 6.2L9 5M10.2 11.8L9 13M17.8 6.2L19 5M3 21l9-9M12.2 12.2l1.4-1.4"></path></svg>') 4 4, auto;
+}
+
+/* Universe 5 Cursor: Star */
+.cursor-star {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%23fef08a" stroke="%23eab308" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>') 12 12, auto;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-30px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float-slow {
+    animation: float-slow 8s ease-in-out infinite;
+}
+
+@keyframes rise {
+    0% { transform: translateY(100vh) translateX(0) scale(0.5); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-20vh) translateX(20px) scale(1); opacity: 0; }
+}
+
+.animate-rise {
+    animation: rise linear infinite;
+}
+
+/* Snowfall animation */
+@keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    top: -10%;
+    z-index: 10;
+}
+
+/* Bubbles animation */
+@keyframes bubble-rise {
+    0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    20% { opacity: 0.8; }
+    80% { opacity: 0.5; }
+    100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+}
+
+.bubble {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+    border-radius: 50%;
+    animation: bubble-rise linear infinite;
+    bottom: -10%;
+    z-index: 5;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Magical Text Glow */
+.text-magic {
+    text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.4);
+}
