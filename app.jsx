@@ -9,7 +9,7 @@ const audioManager = {
         untilifoundyou: new Howl({ src: ['her.mp3'], loop: true, sprite: { main: [27000, 60000] }, volume: 1.0 }),
         perfect: new Howl({ src: ['sanchez.mp3'], loop: true, sprite: { main: [30000, 60000] }, volume: 0.5 }),
         kesariya: new Howl({ src: ['kesariya.mp3'], loop: true, sprite: { main: [18000, 27000] }, volume: 0.15 }),
-        tumhiho: new Howl({ src: ['kannathil_muthamittal.mp3'], loop: false, sprite: { main: [36000, 60000] }, volume: 1.0 })
+        tumhiho: new Howl({ src: ['my_baebee_taanisha.mp3'], loop: false, sprite: { main: [0, 600000] }, volume: 1.0 })
     },
     sfx: {
         whoosh: new Howl({ src: ['whoosh.mp3'], volume: 0.5 }),
